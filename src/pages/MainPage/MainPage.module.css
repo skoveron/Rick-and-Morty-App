@@ -1,0 +1,22 @@
+.mainContainer {
+  background: rgba(49, 48, 55, 0.1);
+}
+.sortFilterContainer {
+  @apply flex justify-between h-[57px] my-[64px];
+}
+.contentContainer {
+  @apply container mx-auto max-w-[1024px] pt-5 md:px-14 sm:px-8;
+}
+.charactersWrapper {
+  @apply grid gap-6 md:gap-12 lg:grid-cols-3 md:grid-cols-2  grid-rows-3 sm:grid-cols-1;
+}
+h1 {
+  font-size: 56px;
+  @apply font-bold;
+}
+.loading {
+  @apply text-center text-lg;
+}
+.error {
+  @apply text-center text-lg text-red-600;
+}

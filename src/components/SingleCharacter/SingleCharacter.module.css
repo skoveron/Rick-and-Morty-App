@@ -1,0 +1,13 @@
+.characterWrapper {
+  border-radius: 16px;
+  @apply flex-col bg-white py-4 px-6 mb-2 hover:shadow hover:transition-all cursor-pointer;
+}
+.singleCharacterImg {
+  width: 352px;
+  height: 208px;
+
+  @apply mb-5;
+}
+div {
+  @apply mb-3;
+}

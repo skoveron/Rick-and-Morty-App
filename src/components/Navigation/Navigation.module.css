@@ -1,0 +1,6 @@
+.navigation {
+  @apply flex justify-between px-5 h-[96px] bg-white items-center;
+}
+.logoImg {
+  @apply h-[56px] w-[167px] mt-5;
+}
