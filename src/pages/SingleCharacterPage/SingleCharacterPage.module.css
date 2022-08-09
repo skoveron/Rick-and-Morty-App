@@ -1,3 +1,12 @@
-/* .singleArticlePageWrapper {
-  @apply container mx-auto pt-5 max-w-[1020px];
-} */
+.singleCharacterPageWrapper {
+  @apply container flex justify-center mx-auto pt-5 max-w-[1020px];
+}
+.characterWrapper {
+  @apply flex-row justify-center;
+}
+.characterDescriptionWrapper {
+  @apply text-center;
+}
+.characterImg {
+  @apply mx-auto;
+}
