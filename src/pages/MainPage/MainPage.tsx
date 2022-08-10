@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import Filter from "../../components/Filter";
 import Footer from "../../components/Footer";
 import Navigation from "../../components/Navigation";
+import Pagination from "../../components/Pagination/Pagination";
 
 import SingleCharacter from "../../components/SingleCharacter";
 import Sorting from "../../components/Sorting";
@@ -14,11 +16,13 @@ import styles from "./MainPage.module.css";
 
 const MainPage = () => {
   const dispatch = useAppDispatch();
-  const { error, loading, characters } = useAppSelector(
-    (state) => state.characters
-  );
-  const pageCount = 42;
-  const count = 826;
+  const { error, loading, characters, count, pages, prev, next } =
+    useAppSelector((state) => state.characters);
+  let [pageNumber, setPageNumber] = useState(1);
+
+  // const { paginationInfo } = useAppSelector((state) => state.paginationInfo);
+  // const pageCount = 42;
+  // const count = 826;
   //const next: "https://rickandmortyapi.com/api/character/?page=2";
   //const prev: null;
   //console.log(characters);
@@ -26,6 +30,19 @@ const MainPage = () => {
   //   (state) => state.paginationInfo
   // );
   // console.log(paginationInfo);
+  // let [currentPage, setCurrentPage] = useState(1);
+  // //const page = useRef(1);
+  // const pageChangeHandler = ({ selected }: { selected: number }) => {
+  //   currentPage = selected + 1;
+  //   dispatch(fetchCharacters());
+  // };
+
+  // const navigate = useNavigate();
+
+  // const clickHandler = ({ selected }: { selected: number }) => {
+  //   navigate(`https://rickandmortyapi.com/api/character/?page=${selected}`);
+  //   dispatch(fetchCharacters());
+  // };
 
   useEffect(() => {
     dispatch(fetchCharacters());
@@ -51,6 +68,12 @@ const MainPage = () => {
             </div>
           </div>
         </div>
+
+        <Pagination
+          pageCount={pages}
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
 
         <Footer />
       </div>

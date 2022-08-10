@@ -24,16 +24,16 @@ export interface AllCharacter<T> {
     count: number;
     pages: number;
     next: string;
-    prev: number;
+    prev: string;
   };
   results: [T];
 }
-export interface IPagination {
-  count: number;
-  pages: number;
-  next: string;
-  prev: string;
-}
+// export interface IPagination {
+//   count: number;
+//   pages: number;
+//   next: string;
+//   prev: string;
+// }
 
 export interface ISingeCharacter {
   created: string;
@@ -55,9 +55,19 @@ export interface ISingeCharacter {
   type: string;
   url: string;
 }
+// export interface ICharacterStatus {
+//   alive: [];
+//   dead: [];
+//   unknown: [];
+// }
+// export type ICharacterSpecies = string;
 
-// export interface PaginationInfo<IPagination> {
-//   info: IPagination
+// export type ICharacterGender = string;
+
+//export type ICharacterStatus = string;
+
+// export interface PaginationInfo {
+//   info: IPagination;
 // }
 // export interface IArticle {
 //   id: number;
