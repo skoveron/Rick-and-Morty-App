@@ -1,11 +1,12 @@
-.singleCharacterPageWrapper {
-  @apply container flex justify-center mx-auto pt-5 max-w-[1020px];
+.singleCharacterPageContainer {
+  background: rgba(49, 48, 55, 0.1);
+  @apply container flex-row justify-center mx-auto pt-5 mb-0 w-full;
 }
 .characterWrapper {
-  @apply flex-row justify-center;
+  @apply flex-row justify-center text-center;
 }
 .characterDescriptionWrapper {
-  @apply text-center;
+  @apply text-center py-5;
 }
 .characterImg {
   @apply mx-auto;

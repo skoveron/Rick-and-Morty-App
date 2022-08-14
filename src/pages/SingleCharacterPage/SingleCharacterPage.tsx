@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "../../common/axios";
+import Footer from "../../components/Footer";
+import Navigation from "../../components/Navigation";
 import { ISingeCharacter } from "../../interfaces";
 import styles from "./SingleCharacterPage.module.css";
 
@@ -22,24 +24,28 @@ const SingleCharacterPage = () => {
 
   if (loading) return <p className="text-center">Loading...</p>;
   return (
-    <div className={styles.singleCharacterPageWrapper}>
-      <div className={styles.characterWrapper}>
-        <h1>{character?.name}</h1>
-        <img
-          className={styles.characterImg}
-          src={character?.image}
-          alt={`${character?.name} img`}
-        />
-        <div className={styles.characterDescriptionWrapper}>
-          <p>Created: {character?.created}</p>
+    <>
+      <Navigation />
+      <div className={styles.singleCharacterPageContainer}>
+        <div className={styles.characterWrapper}>
+          <h1>{character?.name}</h1>
+          <img
+            className={styles.characterImg}
+            src={character?.image}
+            alt={`${character?.name} img`}
+          />
+          <div className={styles.characterDescriptionWrapper}>
+            <p>Created: {character?.created}</p>
 
-          <p>Gender: {character?.gender}</p>
-          <p>Location: {character?.location.name}</p>
-          <p>Species: {character?.species}</p>
-          <p>Status: {character?.status}</p>
+            <p>Gender: {character?.gender}</p>
+            <p>Location: {character?.location.name}</p>
+            <p>Species: {character?.species}</p>
+            <p>Status: {character?.status}</p>
+          </div>
         </div>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

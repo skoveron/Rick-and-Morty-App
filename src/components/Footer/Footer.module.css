@@ -1,3 +1,13 @@
-/* .footerContainer {
-  @apply h-[93px] flex justify-center container mx-auto max-w-[760px] pt-5;
-} */
+.footerContainer {
+  /* background: rgba(49, 48, 55, 0.1); */
+  @apply h-[93px] flex-col justify-center container mx-auto mb-0;
+}
+.footerWrapper {
+  @apply flex px-10 py-6 justify-between mx-auto;
+}
+.footerLine {
+  @apply mx-auto max-w-[500px];
+}
+.footerCopyR {
+  @apply w-[125px] h-[16px];
+}

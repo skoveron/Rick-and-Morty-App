@@ -1,0 +1,12 @@
+.authContainer {
+  @apply container mx-auto max-w-[500px] pt-8;
+}
+.userLabel {
+  @apply block;
+}
+.userInput {
+  @apply border py-1 px-2 w-full;
+}
+.userAuthWrapper {
+  @apply mb-2;
+}

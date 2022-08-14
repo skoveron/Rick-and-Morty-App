@@ -28,12 +28,6 @@ export interface AllCharacter<T> {
   };
   results: [T];
 }
-// export interface IPagination {
-//   count: number;
-//   pages: number;
-//   next: string;
-//   prev: string;
-// }
 
 export interface ISingeCharacter {
   created: string;
@@ -55,47 +49,11 @@ export interface ISingeCharacter {
   type: string;
   url: string;
 }
-// export interface ICharacterStatus {
-//   alive: [];
-//   dead: [];
-//   unknown: [];
-// }
-// export type ICharacterSpecies = string;
 
-// export type ICharacterGender = string;
-
-//export type ICharacterStatus = string;
-
-// export interface PaginationInfo {
-//   info: IPagination;
-// }
-// export interface IArticle {
-//   id: number;
-//   featured: boolean;
-//   title: string;
-//   url: string;
-//   imageUrl: string;
-//   newsSite: string;
-//   summary: string;
-//   publishedAt: string;
-//   launches: [
-//     {
-//       id: string;
-//       provider: string;
-//     }
-//   ];
-//   events: [
-//     {
-//       id: string;
-//       provider: string;
-//     }
-//   ];
-// }
-
-// export interface NumberOfArticlesServerResponse {
-//   data: number;
-// }
-
-// export interface ArticlesServerResponse<T> {
-//   data: T[];
-// }
+export interface ButtonProps {
+  title: string | number;
+  onClick: () => void;
+  disabled?: boolean;
+  width?: string;
+  className?: {};
+}

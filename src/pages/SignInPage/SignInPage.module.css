@@ -1,0 +1,11 @@
+.signInWrapper {
+  border-radius: 16px;
+  @apply container w-[624px] h-[472px] mx-auto mt-8 p-4 flex-col text-center bg-white;
+}
+.signInContainer {
+  @apply container w-full h-full bg-[rgb(229,229,229)];
+}
+
+.h1 {
+  @apply ml-[150px];
+}

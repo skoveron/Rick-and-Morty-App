@@ -1,7 +1,7 @@
 .mainContainer {
   background: rgba(49, 48, 55, 0.1);
 }
-.sortFilterContainer {
+.SearchContainer {
   @apply flex justify-between h-[57px] my-[64px];
 }
 .contentContainer {

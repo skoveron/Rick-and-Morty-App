@@ -2,7 +2,9 @@
   @apply flex justify-center border-none py-2 px-4 mb-4 w-1/2;
 }
 .searchInput {
-  @apply bg-green-200 mt-5 border-none outline-0 py-1 px-1 w-full  h-[42px];
+  border: 1px solid rgba(49, 48, 55, 0.1);
+  border-radius: 4px;
+  /* @apply bg-green-200 mt-5 border-none outline-0 py-1 px-1 w-full  h-[42px]; */
 }
 .btn {
   @apply bg-white h-[42px] w-[42px];
@@ -12,7 +14,7 @@
 }
 
 .searchDropdown {
-  @apply list-none absolute w-1/2 h-[200px] top-[71px] shadow-md bg-red-600 overflow-y-scroll;
+  @apply list-none absolute w-1/2 h-[200px] bottom-[410px] shadow-md bg-white overflow-y-scroll border-r-4;
 }
 
 .charactersLi {
