@@ -19,8 +19,9 @@ const SingleCharacter = ({ character }: SingleCharacterProps) => {
         src={character.image}
         alt="lost img"
       ></img>
-      <div>{character.name}</div>
-      <div>{character.status}</div>
+      <div>Name: {character.name}</div>
+      <div>Gender: {character.gender}</div>
+      <div>Species: {character.species}</div>
     </div>
   );
 };

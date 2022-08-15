@@ -11,3 +11,6 @@
 .footerCopyR {
   @apply w-[125px] h-[16px];
 }
+.switch {
+  @apply flex gap-3;
+}

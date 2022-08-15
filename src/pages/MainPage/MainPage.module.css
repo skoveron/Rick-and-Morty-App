@@ -1,6 +1,12 @@
 .mainContainer {
   background: rgba(49, 48, 55, 0.1);
 }
+#light {
+  background: rgba(49, 48, 55, 0.1);
+}
+#dark {
+  background: #313037;
+}
 .SearchContainer {
   @apply flex justify-between h-[57px] my-[64px];
 }

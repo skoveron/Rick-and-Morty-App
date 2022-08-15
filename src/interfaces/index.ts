@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export interface ICharacter {
   id: number;
   name: string;
@@ -56,4 +58,10 @@ export interface ButtonProps {
   disabled?: boolean;
   width?: string;
   className?: {};
+}
+
+export interface AppTheme {
+  dark: CSSProperties;
+  light: CSSProperties;
+  common?: CSSProperties;
 }
