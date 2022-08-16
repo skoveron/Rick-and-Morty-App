@@ -59,9 +59,3 @@ export interface ButtonProps {
   width?: string;
   className?: {};
 }
-
-export interface AppTheme {
-  dark: CSSProperties;
-  light: CSSProperties;
-  common?: CSSProperties;
-}

@@ -1,20 +1,13 @@
-import { data } from "autoprefixer";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ReactPaginate from "react-paginate";
 import { useAppDispatch } from "../../hooks/redux";
 
 import { fetchCharacters } from "../../redux/actionCreators/fetchCharacters";
 interface PaginationProps {
   pageCount: number;
-  pageNumber: number;
-  setPageNumber: any;
 }
 
-const Pagination = ({
-  pageCount,
-  pageNumber,
-  setPageNumber,
-}: PaginationProps) => {
+const Pagination = ({ pageCount }: PaginationProps) => {
   const dispatch = useAppDispatch();
   const page = useRef(1);
   useEffect(() => {
@@ -30,7 +23,7 @@ const Pagination = ({
     <ReactPaginate
       pageCount={pageCount}
       onPageChange={pageChangeHandler}
-      forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
+      forcePage={page.current === 1 ? 0 : page.current - 1}
       nextLabel="next ->"
       previousLabel="<- prev"
       containerClassName="flex  justify-center my-[76px]"

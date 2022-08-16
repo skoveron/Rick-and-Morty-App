@@ -18,7 +18,7 @@ const MainPage = () => {
   const { error, loading, characters, pages } = useAppSelector(
     (state) => state.characters
   );
-  let [pageNumber, setPageNumber] = useState(1);
+  //let [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
     dispatch(fetchCharacters());
@@ -42,11 +42,7 @@ const MainPage = () => {
           </div>
         </div>
 
-        <Pagination
-          pageCount={pages}
-          pageNumber={pageNumber}
-          setPageNumber={setPageNumber}
-        />
+        <Pagination pageCount={pages} />
 
         <Footer />
       </div>
